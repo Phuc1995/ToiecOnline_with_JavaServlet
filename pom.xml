@@ -19,6 +19,8 @@
         <module>toiec-core-service</module>
         <module>toiec-core-service-impl</module>
         <module>toiec-core-utils</module>
+        <module>toiec-core-persistence-data</module>
+        <module>toiec-core-common</module>
     </modules>
 
     <properties/>
