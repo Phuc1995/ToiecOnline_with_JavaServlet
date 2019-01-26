@@ -17,7 +17,7 @@
         <module>toiec-core-dao</module>
         <module>toiec-core-dao-impl</module>
         <module>toiec-core-service</module>
-        <module>toiec-core-service-impl</module>
+        <module>toiec-core-serviceimpl</module>
         <module>toiec-core-utils</module>
         <module>toiec-core-persistence-data</module>
         <module>toiec-core-common</module>
