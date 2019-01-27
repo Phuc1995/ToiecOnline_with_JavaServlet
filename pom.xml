@@ -21,6 +21,7 @@
         <module>toiec-core-utils</module>
         <module>toiec-core-persistence-data</module>
         <module>toiec-core-common</module>
+        <module>toiec-core-test</module>
     </modules>
 
     <properties>
