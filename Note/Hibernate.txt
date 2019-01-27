@@ -1,0 +1,6 @@
+HQL, SQL native:
+session:
+	+ merge: update date
+	+ persist: add data
+	+ get: restrieve data
+	+ 

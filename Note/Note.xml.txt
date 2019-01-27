@@ -1,0 +1,16 @@
+1. Config accout Git in Intelij:
+	a. File --> Setting
+	b. Search Git --> input Account and Pass
+
+2. Clone Git into Intelij:
+	a. VCS --> input URL git
+	
+3. Config GUI Intelij:
+	a. View --> Toolbar
+
+4. Config MAVEN and JDK project in Intelij:
+	a. File --> Setting
+	b. Search Maven 
+	c. Maven home directory --> choice URL to file install Maven
+====================================================================================================
+
