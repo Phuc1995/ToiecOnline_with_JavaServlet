@@ -2,5 +2,11 @@
 -Hibernate
 -TomCat
 -SQL
--Decorator
+-Decorator:
+	+ page cha(master layout)
+	+ page con()
 -JSTL
+-MVC:
+	+Model(command):trung gian giua controller va view, 
+	+View
+	+Controller
