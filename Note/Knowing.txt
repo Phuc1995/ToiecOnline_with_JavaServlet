@@ -16,6 +16,8 @@
 	+ model - view - controller
 	  controller -->(model-command) view
 	  view --> (model) controller
+	+ DAO: chua cau truy van
+	+ SERVICE -> nhieu ham return ham tu tang DAO -> trong service chua logic code
 -DTO: data tranfer object- Java bean(implement seriliable):
 	+ private property
 	+ Getter and setter

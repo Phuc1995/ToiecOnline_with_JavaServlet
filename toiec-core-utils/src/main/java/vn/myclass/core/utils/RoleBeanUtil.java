@@ -11,7 +11,7 @@ public class RoleBeanUtil {
         return dto;
     }
 
-    public static RoleEntity Dto2entity(RoleDTO roleDTO){
+    public static RoleEntity dto2Entity(RoleDTO roleDTO){
         RoleEntity roleEntity = new RoleEntity();
         roleEntity.setRoleId(roleDTO.getRoleId());
         roleEntity.setName(roleDTO.getName());
