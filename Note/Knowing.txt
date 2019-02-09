@@ -2,6 +2,7 @@
 -Hibernate
 -TomCat
 -SQL
+-Log4j:  BasicConfigurator.configure();
 -Decorator:
 	+ page cha(master layout)
 	+ page con()
