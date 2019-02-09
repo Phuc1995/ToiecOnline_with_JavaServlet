@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: phuc
-  Date: 2/7/2019
-  Time: 10:15 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="center">
+    <h1>
+        <i class="ace-icon fa fa-leaf green"></i>
+        <span class="red">Ace</span>
+        <span class="white" id="id-text2">Application</span>
+    </h1>
+    <h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+</div>
+
+<div class="space-6"></div>

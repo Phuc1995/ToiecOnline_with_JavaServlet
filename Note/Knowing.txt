@@ -5,8 +5,21 @@
 -Decorator:
 	+ page cha(master layout)
 	+ page con()
--JSTL
+-JSTL: thu vien cua JSP, duoc build san, nhung thu vien tu viet ra. 
+	+ <c:url>
+-Taglib:
+	+ fmt:setBundle
 -MVC:
 	+Model(command):trung gian giua controller va view, 
 	+View
 	+Controller
+	+ model - view - controller
+	  controller -->(model-command) view
+	  view --> (model) controller
+-DTO: data tranfer object- Java bean(implement seriliable):
+	+ private property
+	+ Getter and setter
+	+ extend
+	+ implement
+-Pojo: plain old java object	
+	+ class java bean thuan, not implement and extend(implement seriliable)

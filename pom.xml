@@ -22,6 +22,7 @@
         <module>toiec-core-persistence-data</module>
         <module>toiec-core-common</module>
         <module>toiec-core-test</module>
+        <module>toiec-core-web</module>
     </modules>
 
     <properties>
@@ -69,6 +70,11 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-spec</artifactId>
+            <version>1.2.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/displaytag/displaytag -->

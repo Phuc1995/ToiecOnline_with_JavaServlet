@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/admin-home.html")
-public class HomeController extends HttpServlet {
+public class AdminController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
     RequestDispatcher rd = request.getRequestDispatcher("/views/admin/home.jsp");
