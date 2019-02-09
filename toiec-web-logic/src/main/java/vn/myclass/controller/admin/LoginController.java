@@ -2,6 +2,9 @@ package vn.myclass.controller.admin;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import vn.myclass.command.UserCommand;
+import vn.myclass.core.dto.UserDTO;
+import vn.myclass.core.web.utils.FormUtil;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,20 +21,16 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         BasicConfigurator.configure();
-        String test = null;
-        try{
-            if(test.equals("aaa")){
-                System.out.print("aa");
-            }
-        }catch (NullPointerException e){
-            log.error(e.getMessage(),e);
-        }
+
 //        log.error("jsp servlet myclass");
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/login.jsp");
         rd.forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        UserCommand command = FormUtil.populate(UserCommand.class,request);
+        UserDTO pojo = command.getPojo();
+        String name = pojo.getName();
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/login.jsp");
         rd.forward(request, response);
     }

@@ -25,4 +25,10 @@
 	+ extend
 	+ implement
 -Pojo: plain old java object	
+	+ command: save all data from from views
 	+ class java bean thuan, not implement and extend(implement seriliable)
+	+ command -> pojo -> DTO
+	+ UserDTO dto = new UserDTO();
+	  dto.getName();
+	  this.pojo = new UserDTO();
+	  pojo.name;
