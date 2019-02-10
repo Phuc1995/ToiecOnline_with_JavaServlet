@@ -24,7 +24,7 @@ public class UserEntity {
     private Timestamp createdDate;
 
     @ManyToOne
-    @JoinColumn(name = "roleEntity")
+    @JoinColumn(name = "roleid")
     private RoleEntity roleEntity;
 
     @OneToMany(mappedBy = "userEntity", fetch = FetchType.LAZY)

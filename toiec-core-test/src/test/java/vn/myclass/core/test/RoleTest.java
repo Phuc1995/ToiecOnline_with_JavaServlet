@@ -19,8 +19,8 @@ public class RoleTest {
     public void checkUpdateRole() {
         RoleDao roleDao = new RoleDaoImpl();
         RoleEntity entity = new RoleEntity();
-        entity.setRoleId(1);
-        entity.setName("USER_5");
+        entity.setRoleId(2);
+        entity.setName("USER_2");
         roleDao.update(entity);
     }
 
@@ -28,15 +28,7 @@ public class RoleTest {
     public void checkSaveRole() {
         RoleDao roleDao = new RoleDaoImpl();
         RoleEntity entity = new RoleEntity();
-        entity.setRoleId(1);
-        entity.setName("USER_1");
-        RoleEntity entity2 = new RoleEntity();
-        entity2.setRoleId(2);
-        entity2.setName("USER_2");
-        RoleEntity entity3 = new RoleEntity();
-        entity3.setRoleId(7);
-        entity3.setName("USER_7");
-        roleDao.update(entity);
+
     }
 
     @Test
@@ -59,9 +51,8 @@ public class RoleTest {
     @Test
     public void checkDelete() {
        List<Integer> listId = new ArrayList<Integer>();
-//       listId.add(1);
-//       listId.add(2);
-//       RoleDao roleDao = new RoleDaoImpl();
-//       Integer count = roleDao.delete(listId);
+       listId.add(3);
+       RoleDao roleDao = new RoleDaoImpl();
+       Integer count = roleDao.delete(listId);
     }
 }

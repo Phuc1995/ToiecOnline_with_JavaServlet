@@ -1,4 +1,5 @@
--HQL
+-HQL:
+	+ StringBuilder
 -Hibernate
 -TomCat
 -SQL
