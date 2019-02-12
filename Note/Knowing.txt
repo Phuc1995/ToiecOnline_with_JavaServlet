@@ -4,7 +4,7 @@
 -TomCat
 -SQL
 -Log4j:  BasicConfigurator.configure();
--Decorator:
+-SiteMesh/Decorator:
 	+ page cha(master layout)
 	+ page con()
 -JSTL: thu vien cua JSP, duoc build san, nhung thu vien tu viet ra. 
