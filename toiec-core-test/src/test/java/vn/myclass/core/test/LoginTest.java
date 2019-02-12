@@ -10,16 +10,25 @@ import vn.myclass.core.persistence.entity.UserEntity;
 public class LoginTest {
     private final Logger log = Logger.getLogger(LoginTest.class);
 
-    @Test
-    public void checkIsUserExit(){
-        UserDao userDao = new UserDaoImpl();
-        String name = "admin2";
-        String password = "123456";
-        UserEntity entity = userDao.isUserExit(name,password);
-        if(entity!=null){
-            log.error("Sussess");
-        }else {
-            log.error("Fail");
-        }
-    }
+//    @Test
+//    public void checkIsUserExit(){
+//        UserDao userDao = new UserDaoImpl();
+//        String name = "admin2";
+//        String password = "123456";
+//        UserEntity entity = userDao.isUserExit(name,password);
+//        if(entity!=null){
+//            log.error("Sussess");
+//        }else {
+//            log.error("Fail");
+//        }
+//    }
+
+//    @Test
+//    public void checkFindRoleByUser(){
+//        UserDao userDao = new UserDaoImpl();
+//        String name = "admin2";
+//        String password = "123456";
+//        UserEntity entity = userDao.findRoleByName(name,password);
+//        log.error(entity.getRoleEntity().getRoleId()+"-"+entity.getRoleEntity().getName());
+//    }
 }

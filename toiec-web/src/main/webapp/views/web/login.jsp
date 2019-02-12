@@ -18,6 +18,15 @@
 
                 <form action="${formUrl}" method="post">
                     <fieldset>
+                        <c:if test="${not empty messageRespone}">
+                            <div class="alert alert-block alert-${alert}">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <i class="ace-icon fa fa-times"></i>
+                                </button>
+
+                                    ${messageRespone}
+                            </div>
+                        </c:if>
                         <label class="block clearfix">
                             <span class="block input-icon input-icon-right">
                                       <input type="text" class="form-control" placeholder="Username" name="pojo.name"/>
@@ -45,47 +54,9 @@
                                 <span class="bigger-110">Login</span>
                             </button>
                         </div>
-
-                        <div class="space-4"></div>
                     </fieldset>
                 </form>
 
-                <div class="social-or-login center">
-                    <span class="bigger-110">Or Login Using</span>
-                </div>
-
-                <div class="space-6"></div>
-
-                <div class="social-login center">
-                    <a class="btn btn-primary">
-                        <i class="ace-icon fa fa-facebook"></i>
-                    </a>
-
-                    <a class="btn btn-info">
-                        <i class="ace-icon fa fa-twitter"></i>
-                    </a>
-
-                    <a class="btn btn-danger">
-                        <i class="ace-icon fa fa-google-plus"></i>
-                    </a>
-                </div>
-            </div><!-- /.widget-main -->
-
-            <div class="toolbar clearfix">
-                <div>
-                    <a href="#" data-target="#forgot-box" class="forgot-password-link">
-                        <i class="ace-icon fa fa-arrow-left"></i>
-                        I forgot my password
-                    </a>
-                </div>
-
-                <div>
-                    <a href="#" data-target="#signup-box" class="user-signup-link">
-                        I want to register
-                        <i class="ace-icon fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
         </div><!-- /.widget-body -->
     </div><!-- /.login-box -->
 </div>
