@@ -3,11 +3,12 @@
 -Hibernate
 -TomCat
 -SQL
+-Displaytag
 -Log4j:  BasicConfigurator.configure();
 -SiteMesh/Decorator:
 	+ page cha(master layout)
 	+ page con()
--JSTL: thu vien cua JSP, duoc build san, nhung thu vien tu viet ra. 
+-JSTL(JSP Standard Tag Library): thu vien cua JSP, duoc build san, nhung thu vien tu viet ra. 
 	+ <c:url>
 -Taglib:
 	+ fmt:setBundle

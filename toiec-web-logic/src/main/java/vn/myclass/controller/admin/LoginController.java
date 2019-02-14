@@ -38,13 +38,9 @@ public class LoginController extends HttpServlet {
             if(userService.isUserExit(pojo) != null){
                 if(userService.findRoleByUser(pojo )!= null && userService.findRoleByUser(pojo).getRoleDTO() != null) {
                     if(userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_ADMIN)){
-                        request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
-                        request.setAttribute(WebConstant.MESSAGE_RESPONSE, "You are ADMIN");
-                        BasicConfigurator.configure();
-                        log.error("sussecc");
+                        response.sendRedirect("/admin-home.html");
                     }else if(userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)){
-                        request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
-                        request.setAttribute(WebConstant.MESSAGE_RESPONSE, "You are USER");
+                        response.sendRedirect("/home.html");
                     }
                 }
 
@@ -54,7 +50,6 @@ public class LoginController extends HttpServlet {
             request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
             request.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ten hoac mk khong ton tai!");
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/views/web/login.jsp");
-        rd.forward(request, response);
+
     }
 }

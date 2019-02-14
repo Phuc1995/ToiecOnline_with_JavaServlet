@@ -51,7 +51,7 @@
             <b class="arrow"></b>
             <ul class="submenu">
                 <li class="">
-                    <a href="${listenGuidelineListUrl}">
+                    <a href="<c:url value="/admin-guideline-listen-list.html" />">
                         <i class="menu-icon fa fa-caret-right"></i>
                         <fmt:message key="label.guideline.listen.list" bundle="${lang}"/>
                     </a>

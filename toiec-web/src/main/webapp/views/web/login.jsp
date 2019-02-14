@@ -12,7 +12,7 @@
             <div class="widget-main">
                 <h4 class="header blue lighter bigger">
                     <i class="ace-icon fa fa-coffee green"></i>
-                    <fmt:message key="label" bundle="${lang}"/>
+                    <fmt:message key="test" bundle="${lang}"/>
                 </h4>
                 <div class="space-6"></div>
 
