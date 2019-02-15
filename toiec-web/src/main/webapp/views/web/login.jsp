@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="/common/taglib.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <c:url var="formUrl" value="/login.html"/>
@@ -12,7 +13,7 @@
             <div class="widget-main">
                 <h4 class="header blue lighter bigger">
                     <i class="ace-icon fa fa-coffee green"></i>
-                    <fmt:message key="test" bundle="${lang}"/>
+                    <fmt:message key="label.test1" bundle="${lang}"/>
                 </h4>
                 <div class="space-6"></div>
 
