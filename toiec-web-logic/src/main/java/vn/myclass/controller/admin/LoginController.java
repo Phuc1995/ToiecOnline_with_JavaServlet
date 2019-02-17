@@ -47,8 +47,7 @@ public class LoginController extends HttpServlet {
             }
         }catch(NullPointerException e){
             log.error(e.getMessage(),e);
-            request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
-            request.setAttribute(WebConstant.MESSAGE_RESPONSE, "Ten hoac mk khong ton tai!");
+
         }
 
     }

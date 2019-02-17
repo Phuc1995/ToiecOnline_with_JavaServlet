@@ -1,6 +1,7 @@
 -HQL:
 	+ StringBuildere
 -Hibernate
+-Testng
 -TomCat
 -SQL
 -Displaytag
@@ -19,7 +20,7 @@
 	+ model - view - controller
 	  controller -->(model-command) view
 	  view --> (model) controller
-	+ DAO: chua cau truy van
+	+ DAO: chua cau truy van, ket noi databases. Co 1 function clean code-->service co nhieu function use from 1 function DAO
 	+ SERVICE -> nhieu ham return ham tu tang DAO -> trong service chua logic code
 -DTO: data tranfer object- Java bean(implement seriliable):
 	+ private property

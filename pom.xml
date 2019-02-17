@@ -11,6 +11,7 @@
 
     <modules>
         <module>toiec-web-logic</module>
+        <module>toiec-web</module>
         <module>toiec-core-dto</module>
         <module>toiec-core-data</module>
         <module>toiec-core-dao</module>
@@ -22,7 +23,6 @@
         <module>toiec-core-common</module>
         <module>toiec-core-test</module>
         <module>toiec-core-web</module>
-        <module>toiec-web</module>
     </modules>
 
     <properties>
@@ -68,18 +68,11 @@
             <artifactId>sitemesh</artifactId>
             <version>${sitemesh.version}</version>
         </dependency>
-
+        <!--JSTL-->
         <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>javax.servlet.jsp.jstl</artifactId>
-            <version>1.2.4</version>
-        </dependency>
-
-        <!-- http://mvnrepository.com/artifact/javax.servlet.jsp.jstl/javax.servlet.jsp.jstl-api -->
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-            <version>1.2.1</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
         </dependency>
 
         <dependency>
