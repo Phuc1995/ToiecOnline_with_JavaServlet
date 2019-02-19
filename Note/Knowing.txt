@@ -23,6 +23,7 @@
 	+ DAO: chua cau truy van, ket noi databases. Co 1 function clean code-->service co nhieu function use from 1 function DAO
 	+ SERVICE -> nhieu ham return ham tu tang DAO -> trong service chua logic code
 -DTO: data tranfer object- Java bean(implement seriliable):
+	+ Cotent model object
 	+ private property
 	+ Getter and setter
 	+ extend
@@ -35,3 +36,13 @@
 	  dto.getName();
 	  this.pojo = new UserDTO();
 	  pojo.name;
+-Function findByproperties(core-web -> util --> initSearchBean) need to 4 agument
+	+ sortExpression - can ten cua column muon sort
+	+ sortDirection - can tra ve gia tri 1 or 2
+	+ firstItem - can tra ve gia tri
+	+  String sortExpression = request.getParameter(new ParamEncoder(bean.getTableId()).encodeParameterName(TableTagParameters.PARAMETER_SORT));
+	+ StringUtils.isNotBlank(pageStr): check different ""(emty);
+-List hien tai -> List<ListenGuidelineEntity>
+	+list(DTO)
+	+trong Service: chuyen List<ListenGuidelineEntity> --> List<ListenGuideLineDTO>
+	
