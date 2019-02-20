@@ -43,6 +43,17 @@
 	+  String sortExpression = request.getParameter(new ParamEncoder(bean.getTableId()).encodeParameterName(TableTagParameters.PARAMETER_SORT));
 	+ StringUtils.isNotBlank(pageStr): check different ""(emty);
 -List hien tai -> List<ListenGuidelineEntity>
-	+list(DTO)
-	+trong Service: chuyen List<ListenGuidelineEntity> --> List<ListenGuideLineDTO>
-	
+	+ list(DTO)
+	+ trong Service: chuyen List<ListenGuidelineEntity> --> List<ListenGuideLineDTO>
+-Collection:
+	+ List <String> list = new ArrayList<>(): 
+		1.Dong lap for: chay tu dau den cuoi stop when use break,
+	+ HashSet Set<String> set = new HashSet<>(): chi chua phan tu duy nhat khong trung value, lay value cuoi cung, 
+		1.Dong lap for(Book b:set): find theo key.
+-Map: 
+	+ HashMap<Integer, String> map = new HashMap<Integer, String>
+		1.for(Map.Entry<Integer, Book> entry:map.entrySet()){
+			int key = entry.getKey();
+			Book b = entry.getValue();
+		}
+		2.Key trung se lay value cuoi cung
