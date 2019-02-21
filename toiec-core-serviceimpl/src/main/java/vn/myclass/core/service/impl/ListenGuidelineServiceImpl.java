@@ -13,7 +13,7 @@ import java.util.List;
 public class ListenGuidelineServiceImpl implements ListenGuidelineService {
     ListenGuildeDao listenGuildeDao = new ListenGuildelineDaoImpl();
 
-    public Object[] findListenGuildelineByProperties(String property, Object value, String sortExpression, String sortDirection, Integer offset, Integer limit) {
+/*    public Object[] findListenGuildelineByProperties(String property, Object value, String sortExpression, String sortDirection, Integer offset, Integer limit) {
         List<ListenGuidelineDTO> result = new ArrayList<ListenGuidelineDTO>();
         Object[] objects = listenGuildeDao.findByProperty(property, value, sortExpression, sortDirection, offset, limit);
         for (ListenGuidelineEntity item: (List<ListenGuidelineEntity>) objects[1]){
@@ -22,5 +22,5 @@ public class ListenGuidelineServiceImpl implements ListenGuidelineService {
         }
         objects[1] =result;
         return objects;
-    }
+    }*/
 }

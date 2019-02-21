@@ -20,7 +20,7 @@ import java.util.List;
 @WebServlet("/admin-guideline-listen-list.html")
 public class ListenGuidelineController  extends HttpServlet {
     ListenGuidelineService guidelineService = new ListenGuidelineServiceImpl();
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+/*    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ListenGuidelineCommand command = new ListenGuidelineCommand();
         RequestUtil.initSearchBean(request, command);
@@ -30,7 +30,7 @@ public class ListenGuidelineController  extends HttpServlet {
         request.setAttribute(WebConstant.LIST_ITEMS, command);
         RequestDispatcher rd = request.getRequestDispatcher("/views/admin/listenguideline/list.jsp");
         rd.forward(request, response);
-    }
+    }*/
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
