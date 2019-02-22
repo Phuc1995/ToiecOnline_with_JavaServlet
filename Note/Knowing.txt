@@ -3,6 +3,7 @@
 -Hibernate
 -Testng
 -TomCat
+-UrlPatterns
 -SQL
 -Displaytag
 -Log4j:  BasicConfigurator.configure();

@@ -24,6 +24,10 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-12">
+                        <c:url value="/admin-guideline-listen-edit.html" var="ListenGuidelineEditUrl">
+                            <c:param name="urlType" value="url_edit"></c:param>
+                        </c:url>
+                        <a href="${ListenGuidelineEditUrl}"  type="button">Thêm bài hướng dẫn nghe</a>
                         <c:if test="${not empty messageRespone}">
                             <div class="alert alert-block alert-${alert}">
                                 <button type="button" class="close" data-dismiss="alert">
