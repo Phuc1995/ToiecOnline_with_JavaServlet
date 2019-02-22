@@ -24,6 +24,15 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-12">
+                        <c:if test="${not empty messageRespone}">
+                            <div class="alert alert-block alert-${alert}">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <i class="ace-icon fa fa-times"></i>
+                                </button>
+
+                                    ${messageRespone}
+                            </div>
+                        </c:if>
                         <div class="table-responsive">
                             <fmt:bundle basename="ResourcesBundle">
                                 <display:table id="tableList" name="items.listResult" partialList="true" size="${items.totalItems}"
