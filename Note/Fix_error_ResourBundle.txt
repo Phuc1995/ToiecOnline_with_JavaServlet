@@ -1,0 +1,4 @@
+File file = new File("D:\\Toiec\\New folder (2)\\ToiecOnline_with_JavaServlet\\toiec-web\\src\\main\\resource");
+        URL[] urls = {file.toURI().toURL()};
+        ClassLoader loader = new URLClassLoader(urls);
+        ResourceBundle bundle = ResourceBundle.getBundle("ResourcesBundle", Locale.getDefault(), loader);
