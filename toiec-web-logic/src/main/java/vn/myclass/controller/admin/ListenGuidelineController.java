@@ -1,11 +1,12 @@
 package vn.myclass.controller.admin;
 
+
+import org.apache.commons.fileupload.FileUploadException;
 import vn.myclass.command.ListenGuidelineCommand;
-import vn.myclass.core.dto.ListenGuidelineDTO;
+import vn.myclass.core.common.utils.UploadUtil;
 import vn.myclass.core.service.ListenGuidelineService;
 import vn.myclass.core.service.impl.ListenGuidelineServiceImpl;
 import vn.myclass.core.web.utils.FormUtil;
-import vn.myclass.core.web.utils.RequestUtil;
 import vn.myclass.web.logic.common.WebConstant;
 
 import javax.servlet.RequestDispatcher;
@@ -18,8 +19,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -52,5 +51,22 @@ public class ListenGuidelineController  extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        UploadUtil uploadUtil = new UploadUtil();
+        File file = new File("E:\\Java_Servlet\\Toiec_Git_Clone\\Toiec\\version_5.0\\ToiecOnline_with_JavaServlet\\toiec-web\\src\\main\\resource");
+        URL[] urls = {file.toURI().toURL()};
+        ClassLoader loader = new URLClassLoader(urls);
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("ResourcesBundle", Locale.getDefault(), loader);
+        try {
+            uploadUtil.writeOrUpdateFile(request);
+            request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
+            request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.guideline.listen.add.success"));
+        } catch (FileUploadException e) {
+            request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
+            request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.error"));
+        }catch (Exception e){
+            request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
+            request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.error"));
+        }
+        response.sendRedirect("/admin-guideline-listen-edit.html?urlType=url_edit");
     }
 }

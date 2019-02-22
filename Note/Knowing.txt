@@ -5,6 +5,9 @@
 -TomCat
 -UrlPatterns
 -SQL
+-Apache Commons Upload File:
+	+ enctype="multipart/form-data"
+	
 -Displaytag
 -Log4j:  BasicConfigurator.configure();
 -SiteMesh/Decorator:
