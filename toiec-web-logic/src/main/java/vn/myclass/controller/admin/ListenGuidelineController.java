@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -33,7 +34,12 @@ public class ListenGuidelineController  extends HttpServlet {
         URL[] urls = {file.toURI().toURL()};
         ClassLoader loader = new URLClassLoader(urls);
         ResourceBundle resourceBundle = ResourceBundle.getBundle("ResourcesBundle", Locale.getDefault(), loader);
-/*        RequestUtil.initSearchBean(request, command);
+        HttpSession session = request.getSession();
+        if(session != null){
+            request.setAttribute(WebConstant.ALERT,session.getAttribute(WebConstant.ALERT));
+            request.setAttribute(WebConstant.MESSAGE_RESPONSE,session.getAttribute(WebConstant.MESSAGE_RESPONSE));
+        }
+        /*        RequestUtil.initSearchBean(request, command);
         Object[] objects = guidelineService.findListenGuildelineByProperties(null,null,command.getSortExpression(),command.getSortDirection(),command.getFirstItem(),command.getMaxPageItems());
         command.setListResult((List<ListenGuidelineDTO>) objects[1]);
         command.setTotalItems(Integer.parseInt(objects[0].toString()));*/
@@ -47,7 +53,8 @@ public class ListenGuidelineController  extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/views/admin/listenguideline/edit.jsp");
             rd.forward(request, response);
         }
-
+        session.removeAttribute(WebConstant.ALERT);
+        session.removeAttribute(WebConstant.MESSAGE_RESPONSE);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -56,10 +63,11 @@ public class ListenGuidelineController  extends HttpServlet {
         URL[] urls = {file.toURI().toURL()};
         ClassLoader loader = new URLClassLoader(urls);
         ResourceBundle resourceBundle = ResourceBundle.getBundle("ResourcesBundle", Locale.getDefault(), loader);
+        HttpSession session = request.getSession();
         try {
             uploadUtil.writeOrUpdateFile(request);
-            request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
-            request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.guideline.listen.add.success"));
+            session.setAttribute(WebConstant.ALERT, WebConstant.TYPE_SUCCESS);
+            session.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.guideline.listen.add.success"));
         } catch (FileUploadException e) {
             request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
             request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.error"));
@@ -67,6 +75,6 @@ public class ListenGuidelineController  extends HttpServlet {
             request.setAttribute(WebConstant.ALERT, WebConstant.TYPE_ERROR);
             request.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.error"));
         }
-        response.sendRedirect("/admin-guideline-listen-edit.html?urlType=url_edit");
+        response.sendRedirect("/admin-guideline-listen-edit.html?urlType=url_list");
     }
 }

@@ -7,7 +7,7 @@
 -SQL
 -Apache Commons Upload File:
 	+ enctype="multipart/form-data"
-	
+-HttpSession	
 -Displaytag
 -Log4j:  BasicConfigurator.configure();
 -SiteMesh/Decorator:

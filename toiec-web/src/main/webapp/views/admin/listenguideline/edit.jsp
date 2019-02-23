@@ -1,15 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/common/taglib.jsp"%>
-<c:url var="formUrl" value="/admin-guideline-listen-edit.html"></c:url>
-<c:if test="${not empty messageRespone}">
-    <div class="alert alert-block alert-${alert}">
-        <button type="button" class="close" data-dismiss="alert">
-            <i class="ace-icon fa fa-times"></i>
-        </button>
 
-            ${messageRespone}
-    </div>
-</c:if>
 <html>
 <head>
     <title>Title</title>
