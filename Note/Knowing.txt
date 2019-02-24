@@ -5,6 +5,8 @@
 -TomCat
 -UrlPatterns
 -SQL
+-jQuery Syntax:
+	+$(selector).action()
 -Apache Commons Upload File:
 	+ enctype="multipart/form-data"
 -HttpSession	

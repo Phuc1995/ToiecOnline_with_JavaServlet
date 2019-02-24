@@ -32,57 +32,55 @@
                                     ${messageResponse}
                             </div>
                         </c:if>
-                        <form action="${formUrl}" method="post" enctype="multipart/form-data" id="formEdit">
-<%--                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.guideline.title" bundle="${lang}"/></label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="pojo.title" id="title" value="${item.pojo.title}"/>
-                                </div>
-                            </div>--%>
-                            <%--<br/>--%>
-                            <%--<br/>--%>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.grammarguideline.upload.image" bundle="${lang}"/></label>
-                                <div class="col-sm-9">
-                                    <input type="file" name="file" id="uploadImage"/>
-                                </div>
+
+<%--                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">aaaaaaaaaaa</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="JSP-Servlet Tesstttttttt" id="value">
                             </div>
-                            <br/>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.grammarguideline.upload.image.view" bundle="${lang}"/></label>
-                                <div class="col-sm-9">
-                                    <c:if test="${not empty item.pojo.image}">
-                                        <c:set var="image" value="/repository/${item.pojo.image}"/>
-                                    </c:if>
-                                    <img src="${image}" id="viewImage" width="150px" height="150ox">
-                                </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">aaaaaaaaaaa</label>
+                            <div class="col-sm-9">
+                                <<p class="Show">Nothing in this</p>
                             </div>
-                            <br/>
-                            <br/>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.guideline.content" bundle="${lang}"/></label>
-                            </div>
-<%--                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <c:if test="${not empty item.pojo.content}">
-                                        <c:set var="content" value="${item.pojo.content}"/>
-                                    </c:if>
-                                    <textarea name="pojo.content" cols="80" rows="10" id="ListenGuidelineContent">${content}</textarea>
-                                </div>
-                            </div>--%>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <input type="submit" class="btn btn-white btn-warning btn-bold" value="<fmt:message key="label.done" bundle="${lang}"/>"/>
-                                </div>
-                            </div>
-<%--                            <c:if test="${not empty item.pojo.listenGuidelineId}">
-                                <input type="hidden" name="pojo.listenGuidelineId" value="${item.pojo.listenGuidelineId}"/>
-                            </c:if>--%>
-                        </form>
+                        </div>
+                        <label class="col-sm-3 control-label no-padding-right">aaaaaaaaaaa</label>
+                        <div class="col-sm-9">
+                            <button onclick="usingValAction()">Show info</button>
+                        </div>--%>
+
+                        <%--jQuery closest() Method--%>
+                        <div style="width:500px;">div (great-grandparent)
+                            <ul>ul (second ancestor - second grandparent)
+                                <ul>ul (first ancestor - first grandparent)
+                                    <li>li (direct parent)
+                                        <span>span</span>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                        </body>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+
+
+        });
+        function hideAllWhenClickButton() {
+            $("#btnHide").click(function () {
+                $(".textHide").hide();
+            });
+        }
+        function usingValAction() {
+                var value =       $("#value").val();
+                $(".Show").html(value);
+        }
+    </script>
 </body>
 </html>

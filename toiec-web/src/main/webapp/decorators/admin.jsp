@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<c:url value="/template/admin/css/global_admin_style.css"/>">
     <script type="text/javascript" src="<c:url value="/template/admin/js/global_admin_script.js"/>"></script>
     <script src="<c:url value='/template/admin/assets/js/jquery.validate.min.js' />"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%--ckeditor plugin--%>
     <%--<script type="text/javascript" src="<c:url value="/adckeditor/ckeditor.js"/>"></script>--%>
 
