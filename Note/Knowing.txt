@@ -5,6 +5,15 @@
 -TomCat
 -UrlPatterns
 -SQL
+-Jquery:
+	+Jquery each
+		1.$.each(array, function(index, value){
+				cosole.log("Value: "+ value +"- position: "+ index);
+			});
+	+$('#sex').on('change'), function(){}
+	+.attr('id') == "checkAll"
+	+.prop('checked' == false);
+	+.closest('table').find('type=checkbox').prop('checked', false);
 -Apache Commons Upload File:
 	+ enctype="multipart/form-data"
 -HttpSession	

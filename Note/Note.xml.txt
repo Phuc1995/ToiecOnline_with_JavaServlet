@@ -12,5 +12,7 @@
 	a. File --> Setting
 	b. Search Maven 
 	c. Maven home directory --> choice URL to file install Maven
+
+5. Merger code intelij bai 47
 ====================================================================================================
 
