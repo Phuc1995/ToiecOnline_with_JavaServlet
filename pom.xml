@@ -62,7 +62,7 @@
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        <!-- template sitemesh decorator easier than tiles library -->
+        <!-- template sitemesh  easier than tiles library -->
         <dependency>
             <groupId>opensymphony</groupId>
             <artifactId>sitemesh</artifactId>

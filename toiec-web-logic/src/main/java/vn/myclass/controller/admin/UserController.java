@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(urlPatterns = {"/admin-user-list.html"})
+@WebServlet(urlPatterns = {"/admin-user-list.html", "/ajax-admin-user-edit.html"})
 public class UserController extends HttpServlet {
     UserService userService = new UserServiceImpl();
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,6 +35,10 @@ public class UserController extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/views/admin/user/list.jsp");
             rd.forward(request, response);
 
+        }else if (command.getUrlType().equals(WebConstant.URL_EDIT)){
+            request.setAttribute(WebConstant.FROM_ITEM, command);
+            RequestDispatcher rd = request.getRequestDispatcher("/views/admin/user/edit.jsp");
+            rd.forward(request, response);
         }
 
     }

@@ -1,6 +1,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/common/taglib.jsp"%>
+<c:url var="editUserUrl" value="/ajax-admin-user-edit.html">
+    <c:param name="urlType" value="url_edit"></c:param>
+</c:url>
 <html>
 <head>
     <title><fmt:message key="label.user.management" bundle="${lang}"/></title>
@@ -30,7 +33,7 @@
                                 <div class="table-btn-controls">
                                     <div class="pull-right tableTools-container">
                                         <div class="dt-buttons btn-overlap btn-group">
-                                            <a flag="info" class="dt-button buttons-colvis btn btn-white btn-primary btn-bold">
+                                            <a flag="info" class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" onclick="update(this)">
                                                 <span>
                                                     <i class="fa fa-plus-circle bigger-110 purple"></i>
                                                 </span>
@@ -70,9 +73,16 @@
                                         </fieldset>
                                     </display:column>
                                     <display:column property="name" titleKey="label.user.name" sortable="true" sortName="name"></display:column>
-                                    <display:column property="fullName" titleKey="label.user.fullname" sortable="true" sortName="fullName">
-
+                                    <display:column property="fullName" titleKey="label.user.fullname" sortable="true" sortName="fullName"></display:column>
+                                    <display:column headerClass="col-actions" titleKey="label.action">
+                                        <c:url var="editUrl" value="/ajax-admin-user-edit.html">
+                                            <c:param name="urlType" value="url_edit"/>
+                                            <c:param name="pojo.userId" value="${tableList.userId}"/>
+                                        </c:url>
+                                        <a class="btn btn-sm btn-primary btn-edit" onclick="update(this)" sc-url="${editUrl}" onclick="update(this)" data-toggle="tooltip" title="<fmt:message key='label.user.edit' bundle='${lang}'/>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <a class="btn btn-sm btn-danger btn-cancel" data-toggle="tooltip" title="<fmt:message key='label.user.delete' bundle='${lang}'/>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </display:column>
+
                                 </display:table>
                             </fmt:bundle>
                         </div>
@@ -81,5 +91,24 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+
+    </div>
+<script>
+    $(document).ready(function () {
+        update(btn);
+    });
+    function update(btn) {
+        <%--var editUserUrl = '${editUserUrl}';--%>
+        var editUrl  = $(btn).attr('sc-url');
+        if(typeof editUrl  == 'undefined'){
+            editUrl  = '${editUserUrl}';
+        }
+        $('#myModal').load(editUrl , '', function () {
+            $('#myModal').modal('toggle');
+        });
+    }
+</script>
 </body>
 </html>

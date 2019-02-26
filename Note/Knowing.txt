@@ -14,6 +14,7 @@
 	+.attr('id') == "checkAll"
 	+.prop('checked' == false);
 	+.closest('table').find('type=checkbox').prop('checked', false);
+	+load method()
 -Apache Commons Upload File:
 	+ enctype="multipart/form-data"
 -HttpSession	
@@ -70,3 +71,8 @@
 			Book b = entry.getValue();
 		}
 		2.Key trung se lay value cuoi cung
+-Bootstrap JS Modal:
+	+ https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+-Ajax:
+	+
+-
