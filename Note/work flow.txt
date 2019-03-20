@@ -1,0 +1,7 @@
+-  $('#myModal').load(editUrl , '', function () {
+            $('#myModal').modal('toggle');
+            addOrEditUser();
+        }); chu y
+	when $('#formUrl').submit(); 
+		will sent to id="formUrl" 
+			to ${listUserUrl}" --> <c:url var="listUserUrl" value="/admin-user-list.html">

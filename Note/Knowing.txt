@@ -25,6 +25,10 @@
 	+ page con()
 -JSTL(JSP Standard Tag Library): thu vien cua JSP, duoc build san, nhung thu vien tu viet ra. 
 	+ <c:url>
+	+ <c:choose>
+		<c:when>
+		<c:otherwise>
+	  </c:choose>
 -Taglib:
 	+ fmt:setBundle
 -MVC:
@@ -73,6 +77,6 @@
 		2.Key trung se lay value cuoi cung
 -Bootstrap JS Modal:
 	+ https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
--Ajax:
-	+
--
+-Ajax: xu ly bat dong bo, 
+	+ allways have: type, url, data, dataType
+-51.5
