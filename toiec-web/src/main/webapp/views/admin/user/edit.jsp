@@ -27,7 +27,7 @@
                             <div class="col-md-12">
                                 <div class="md-form">
                                     <input type="text" placeholder="<fmt:message key='label.user.name' bundle='${lang}'/>"
-                                           class="form-control" value="${item.pojo.name}" id="username"/>
+                                           class="form-control" value="${item.pojo.name}" id="username" name="pojo.name"/>
                                 </div>
                             </div>
                             <br/>
@@ -35,7 +35,7 @@
                             <div class="col-md-12">
                                 <div class="md-form">
                                     <input type="text" placeholder="<fmt:message key='label.user.fullname' bundle='${lang}'/>"
-                                           class="form-control" value="${item.pojo.fullName}" id="fullname"/>
+                                           class="form-control" value="${item.pojo.fullName}" id="fullname" name="pojo.fullName"/>
                                 </div>
                             </div>
                             <br/>
@@ -44,7 +44,7 @@
                             <div class="col-md-12">
                                 <div class="md-form">
                                     <input type="password" placeholder="<fmt:message key='label.user.password' bundle='${lang}'/>"
-                                           class="form-control" value="${item.pojo.password}" id="password"/>
+                                           class="form-control" value="${item.pojo.password}" id="password" name="pojo.password"/>
                                 </div>
                             </div>
                             <br/>
@@ -54,7 +54,7 @@
                                 <div class="md-form">
                                     <c:choose>
                                         <c:when test="${not empty item.pojo.userId}">
-                                            <select>
+                                            <select id="role" name="roleId">
                                                 <option value="${item.pojo.roleDTO.roleId}">${item.pojo.roleDTO.name}</option>
                                                 <c:forEach items="${item.roles}" var="itemRole">
                                                     <c:if test="${itemRole.roleId != item.pojo.roleDTO.roleId}">
@@ -64,7 +64,7 @@
                                             </select>
                                         </c:when>
                                         <c:otherwise>
-                                            <select id="role">
+                                            <select id="role" name="roleId">
                                                 <option><fmt:message key="label.option.role" bundle='${lang}'/></option>
                                                 <c:forEach items="${item.roles}" var="itemRole">
                                                     <option value="${itemRole.roleId}">${itemRole.name}</option>
@@ -76,7 +76,10 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="pojo.userId" value="${item.pojo.userId}"><
+                    <c:if test="${not empty item.pojo.userId}">
+                        <input type="hidden" name="pojo.userId" value="${item.pojo.userId}"/>
+                    </c:if>
+
                     <input type="hidden" name="crudaction" id="crudactionEdit" />
                 </form>
                 <div class="modal-footer">

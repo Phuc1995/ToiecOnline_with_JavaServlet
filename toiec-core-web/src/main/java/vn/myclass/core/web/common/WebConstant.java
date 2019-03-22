@@ -1,4 +1,4 @@
-package vn.myclass.web.logic.common;
+package vn.myclass.core.web.common;
 
 public class WebConstant {
     public static final String MESSAGE_RESPONSE = "messageRespone";
@@ -16,6 +16,6 @@ public class WebConstant {
     public static final String REDIRECT_INSERT = "redirect_insert";
     public static final String REDIRECT_UPDATE = "redirect_update";
     public static final String REDIRECT_DELETE = "redirect_detele";
-    public static final String REDIRECT_ERROR = "redirect_update";
+    public static final String REDIRECT_ERROR = "redirect_error";
 
 }

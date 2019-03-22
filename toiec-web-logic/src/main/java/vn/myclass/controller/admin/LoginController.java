@@ -6,8 +6,9 @@ import vn.myclass.command.UserCommand;
 import vn.myclass.core.dto.UserDTO;
 import vn.myclass.core.service.UserService;
 import vn.myclass.core.service.impl.UserServiceImpl;
+import vn.myclass.core.web.common.WebConstant;
 import vn.myclass.core.web.utils.FormUtil;
-import vn.myclass.web.logic.common.WebConstant;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

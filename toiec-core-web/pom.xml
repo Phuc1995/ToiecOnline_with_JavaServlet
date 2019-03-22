@@ -12,6 +12,11 @@
 
     <artifactId>toiec-core-web</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>vn.myclass</groupId>
+            <artifactId>toiec-core-service-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

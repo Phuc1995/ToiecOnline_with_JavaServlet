@@ -6,8 +6,8 @@ import vn.myclass.command.ListenGuidelineCommand;
 import vn.myclass.core.common.utils.UploadUtil;
 import vn.myclass.core.service.ListenGuidelineService;
 import vn.myclass.core.service.impl.ListenGuidelineServiceImpl;
+import vn.myclass.core.web.common.WebConstant;
 import vn.myclass.core.web.utils.FormUtil;
-import vn.myclass.web.logic.common.WebConstant;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
