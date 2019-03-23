@@ -79,4 +79,4 @@
 	+ https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
 -Ajax: xu ly bat dong bo, 
 	+ allways have: type, url, data, dataType
--51.5
+-Design pattern

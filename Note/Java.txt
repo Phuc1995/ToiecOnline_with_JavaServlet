@@ -1,0 +1,17 @@
+﻿-Static:
+	+ Biến đó được gọi là biến tĩnh, hay biến static
+	+ Biến static lấy bộ nhớ chỉ một lần trong Class Area tại thời gian tải lớp đó
+	+ Một phương thức static thuộc lớp chứ không phải đối tượng của lớp.
+	+ Một phương thức static có thể được triệu hồi mà không cần tạo một instance của một lớp.
+	+ Phương thức static có thể truy cập thành viên dữ liệu static và có thể thay đổi giá trị của nó.
+	+ Một biến vừa khai báo từ khóa final vừa khai báo từ khóa static thì nó được xem như là một hằng số
+	+ Người dùng không thể override (đè) phương thức static trong Java, 
+	Han che:
+		+ Phương thức static không thể sử dụng thành viên dữ liệu non-static hoặc gọi trực tiếp phương thức non-static.
+		+ Từ khóa this và super không thể được sử dụng trong ngữ cảnh static
+
+-Final:
+	+ Biến final: khi một biến được khai báo với từ khoá final, nó chỉ chứa một giá trị duy nhất trong toàn bộ chương trình (hay dễ hiểu hơn gọi là biến hằng).
+	+ Phương thức final: khi một phương thức được khai báo với từ khoá final, các class con kế thừa sẽ không thể ghi đè (override) phương thức này.
+	+ Lớp final: khi từ khoá final sử dụng cho một lớp, lớp này sẽ không thể được kế thừa.
+	+ Biến static final trống: Một biến final mà không được khởi tạo tại thời điểm khai báo được gọi là biến final trống.

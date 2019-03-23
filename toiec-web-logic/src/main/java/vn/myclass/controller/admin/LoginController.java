@@ -8,6 +8,7 @@ import vn.myclass.core.service.UserService;
 import vn.myclass.core.service.impl.UserServiceImpl;
 import vn.myclass.core.web.common.WebConstant;
 import vn.myclass.core.web.utils.FormUtil;
+import vn.myclass.core.web.utils.SingletonServiceUtil;
 
 
 import javax.servlet.RequestDispatcher;
@@ -34,13 +35,12 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         UserCommand command = FormUtil.populate(UserCommand.class,request);
         UserDTO pojo = command.getPojo();
-        UserService userService = new UserServiceImpl();
         try{
-            if(userService.isUserExit(pojo) != null){
-                if(userService.findRoleByUser(pojo )!= null && userService.findRoleByUser(pojo).getRoleDTO() != null) {
-                    if(userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_ADMIN)){
+            if(SingletonServiceUtil.getUserServiceImplInstance().isUserExit(pojo) != null){
+                if(SingletonServiceUtil.getUserServiceImplInstance().findRoleByUser(pojo )!= null && SingletonServiceUtil.getUserServiceImplInstance().findRoleByUser(pojo).getRoleDTO() != null) {
+                    if(SingletonServiceUtil.getUserServiceImplInstance().findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_ADMIN)){
                         response.sendRedirect("/admin-home.html");
-                    }else if(userService.findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)){
+                    }else if(SingletonServiceUtil.getUserServiceImplInstance().findRoleByUser(pojo).getRoleDTO().getName().equals(WebConstant.ROLE_USER)){
                         response.sendRedirect("/home.html");
                     }
                 }

@@ -1,0 +1,23 @@
+﻿1.Ý nghĩa của từ khoá static trong Java là gì? Chúng ta có thể override (đè) một hàm private hoặc static trong Java không?
+	: Từ khoá static biểu thị cho biến hoặc phương thức có thể được truy cập (sử dụng) mà không cần tạo ra thực thể của lớp chứa nó. 
+	Người dùng không thể override phương thức static trong Java, bởi vì kỹ thuật đè (overriding) phương thức được dựa trên quá trình gán (binding) 
+	động khi runtime (khi chương trình đang chạy) và những phương thức static  được gán tĩnh trong thời gian biên dịch. 
+	Phương thức tĩnh không ràng buộc với thực thể của lớp nên phương thức tĩnh sẽ không thể override.
+
+2.Chúng ta có thể truy cập một biến không tĩnh(non-static) trong một ngữ cảnh static được không?:
+	Một biến static phụ thuộc vào lớp của nó và giá trị của nó sẽ tồn tại (giữ) cho tất cả các thực thể của lớp đó. 
+	Biến static được tạo ra khi lớp chứa đó được tải (load) bởi JVM. Nếu cố gắng truy cập vào một biến non-static (trong hàm static) mà không có trong thực thể (instance) 
+	nào thì trình biên dịch sẽ báo lỗi, bởi vì những biến đó (non-static) chưa được khởi tạo và chúng không có ràng buộc với bất kỳ thực thể nào.
+3. Tại sao phương thức main trong Java là static?
+	Trả lời: Bởi vì không cần thiết phải tạo đối tượng để gọi phương thức static. 
+	Nếu nó là phương thức non-static, JVM đầu tiên tạo đối tượng và sau đó gọi phương thức main() mà có thể gây ra vấn đề về cấp phát bộ nhớ bộ nhớ phụ.
+
+4. Chúng ta có thể thực thi một chương trình mà không có phương thức main()? Tra loi: Co
+
+5.Phương thức final có được kế thừa không?
+	Tra loi: Có, phương thức final được kế thừa nhưng bạn không thể ghi đè nó
+
+6.Biến final trống hoặc không được khởi tạo là gì
+	Tra loi: Một biến final mà không được khởi tạo tại thời điểm khai báo được gọi là biến final trống. Biến được khởi tạo tại thời điểm tạo đối tượng và một khi nó đã được khởi tạo thì không thể bị thay đổi.
+
+7.
