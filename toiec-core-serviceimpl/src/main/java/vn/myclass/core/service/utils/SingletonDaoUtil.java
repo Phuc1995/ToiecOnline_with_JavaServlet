@@ -1,12 +1,10 @@
 package vn.myclass.core.service.utils;
 
-import vn.myclass.core.dao.ListenGuildeDao;
 import vn.myclass.core.daoimpl.ListenGuildelineDaoImpl;
 import vn.myclass.core.daoimpl.RoleDaoImpl;
 import vn.myclass.core.daoimpl.UserDaoImpl;
-import vn.myclass.core.service.impl.UserServiceImpl;
 
-public class SingletonServiceUtil {
+public class SingletonDaoUtil {
     private static UserDaoImpl userDaoImpl = null;
     private static RoleDaoImpl roleDaoImpl = null;
     private static ListenGuildelineDaoImpl listenGuildelineDaoImpl = null;

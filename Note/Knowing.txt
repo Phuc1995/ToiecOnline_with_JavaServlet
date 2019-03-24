@@ -1,5 +1,6 @@
--HQL:
-	+ StringBuildere
+-HQL: 	+ use in quan e 1-n, n-n(SQL native khong: use toan tu join)
+	+ 
+	+ StringBuilder: StringBuilder sql = new StringBuilder();
 -Hibernate
 -Testng
 -TomCat
